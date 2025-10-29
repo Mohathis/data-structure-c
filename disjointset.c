@@ -7,22 +7,23 @@ struct node
 {
 int value;
 struct rep * repptr; //pointer to header node of the list
-struct node * next;
+struct node * next;  //pointer to next node
 };
 //structure to represent header node of liked representation os set
 
 struct rep
 {
- struct node * head;
- struct node * tail;
+ struct node * head; //pointer to fist element
+ struct node * tail; //pointer to last element
 };
+
 //structure to store key and  object node pointer
 
 struct nodaddr
 {
  int key;
- struct node * obj_node_ptr;
- struct nodaddr * next;
+ struct node * obj_node_ptr; //pointer to its corresponding object node
+ struct nodaddr * next;  //pointer to next key object
 };
 
 struct nodaddr * ndr=0;//list to store keys and object node pointer
@@ -112,16 +113,16 @@ void display_set(int a)
 
 void main()
 {
-makeset(10);
+makeset(10); //create a set 
 makeset(20);
 makeset(30);
 makeset(40);
 makeset(50);
-printf("find(10)=%X",find(10));
+printf("find(10)=%X",find(10));  //return the representative pointer containg 10
 printf("\nfind(20)=%X",find(20));
 printf("\nfind(30)=%X",find(30));
 printf("\nfind(40)=%X",find(40));
-unionset(10,20);
+unionset(10,20);  //merges the sets containg 10 and 20
 printf("\n after union of 10 & 20 Find(20)=%X",find(20));
 unionset(30,40);
 printf("\n after union of 30 & 40 Find(40)=%X",find(40));
