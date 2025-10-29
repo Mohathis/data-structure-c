@@ -128,6 +128,6 @@ unionset(30,40);
 printf("\n after union of 30 & 40 Find(40)=%X",find(40));
 unionset(20,40);
 printf("\n after union of set containg 20 and set containg  40 Find(40)=%X",find(40));
-display_set(40);
+display_set(40);  //prints all members in the set containg 10
 
 }
